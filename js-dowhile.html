@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript: do while</title>
+  <link rel="stylesheet" href="adorno.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!-- barra de navegacion -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">Inicio</a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">HTML</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="semantica.html">Semántica</a>
+        <a class="dropdown-item" href="formulario.html">Formulario</a>
+        <a class="dropdown-item" href="tablas.html">Tablas</a>
+        <a class="dropdown-item" href="listas.html">Listas</a>
+        <a class="dropdown-item" href="etiqueta.html">Etiquetas</a>
+        <a class="dropdown-item" href="hipervinculo.html">Hipervínculos</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CSS</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="estilos.html">Estilos de hipervínculo</a>
+        <a class="dropdown-item" href="selector.html">Selectores</a>
+        <a class="dropdown-item" href="css.html">CSS</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
+        <a class="dropdown-item" href="js-condicionales.html">Condicionales (if / else / switch)</a>
+        <a class="dropdown-item" href="js-funciones.html">Funciones</a>
+        <a class="dropdown-item" href="js-for.html">Ciclo for</a>
+        <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
+        <a class="dropdown-item" href="js-dom.html">DOM y métodos</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="contenido">
+
+<h1>Ciclo do while</h1>
+
+<p>
+  <strong>do while</strong> ejecuta el bloque al menos una vez y luego
+  repite mientras la condición sea verdadera.
+</p>
+
+<div class="ejemplo">let i = 1;
+do {
+  document.write("Hola&lt;br&gt;");
+  i++;
+} while (i <= 5);</div>
+
+<h2>Pedir un dato hasta que no esté vacío</h2>
+<div class="ejemplo">let nombre;
+do {
+  nombre = prompt("Escribe tu nombre");
+} while (nombre == "");
+document.write("Hola " + nombre);</div>
+
+<h2>Contraseña hasta que sea correcta</h2>
+<div class="ejemplo">let clave;
+do {
+  clave = prompt("Ingresa tu clave:");
+} while (clave !== "1234");
+document.write("Clave correcta. Acceso permitido");</div>
+
+<div class="nota">
+  La condición debe ser la de <em>seguir pidiendo</em>.
+  Si la clave correcta es "1234", se repite mientras <code>clave !== "1234"</code>.
+</div>
+
+<h2>Repetir mientras el usuario diga "si"</h2>
+<div class="ejemplo">let respuesta;
+do {
+  respuesta = prompt("¿Quieres continuar? si / no");
+} while (respuesta == "si");
+document.write("¡Gracias por participar!");</div>
+
+<h2>for vs do while</h2>
+<table class="tabla-tema">
+  <tr><th>for</th><th>do while</th></tr>
+  <tr><td>Sabes cuántas repeticiones</td><td>Repites hasta que cambie una condición</td></tr>
+  <tr><td>Contador i típico</td><td>Validar datos, menús, contraseñas</td></tr>
+</table>
+
+</div>
+
+<footer class="pie">Proyecto · Construye Aplicaciones Web · HTML, CSS y JavaScript</footer>
+</body>
+</html>

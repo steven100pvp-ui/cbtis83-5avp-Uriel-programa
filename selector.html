@@ -13,12 +13,10 @@
 <body>
 <!-- barra de navegacion -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="index.html">
-    <img src="https://th.bing.com/th/id/OIP.QuIO-Kdup3cbkmSBqo0DiQAAAA?w=153&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="logo" style="width:40px;">
-  </a>
+  <a class="navbar-brand" href="index.html">Inicio</a>
   <ul class="navbar-nav">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">HTML</a>
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">HTML</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="semantica.html">Semántica</a>
         <a class="dropdown-item" href="formulario.html">Formulario</a>
@@ -29,53 +27,42 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">CSS</a>
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CSS</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="estilos.html">Estilos de hipervínculo</a>
         <a class="dropdown-item" href="selector.html">Selectores</a>
         <a class="dropdown-item" href="css.html">CSS</a>
       </div>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
+        <a class="dropdown-item" href="js-condicionales.html">Condicionales (if / else / switch)</a>
+        <a class="dropdown-item" href="js-funciones.html">Funciones</a>
+        <a class="dropdown-item" href="js-for.html">Ciclo for</a>
+        <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
+        <a class="dropdown-item" href="js-dom.html">DOM y métodos</a>
+      </div>
+    </li>
   </ul>
 </nav>
-
 <div class="contenido">
 
-<h1>Selectores y propiedades CSS</h1>
-
-<h2>¿Qué es CSS?</h2>
-<p>CSS es un lenguaje que permite cambiar la apariencia de las páginas web. Se utiliza para modificar colores, tamaños de letra, espacios, bordes y la distribución de los elementos.</p>
-
-<h2>Tipos de selectores</h2>
+<h1>Selectores CSS</h1>
 <ul>
-  <li><strong>Selector de etiqueta</strong>: aplica estilos a elementos como p o h1.</li>
-  <li><strong>Selector de clase</strong>: nombre precedido por un punto (.bienvenida).</li>
-  <li><strong>Selector de ID</strong>: identificador con numeral (#inicio).</li>
-  <li><strong>Selector universal</strong>: el asterisco (*) selecciona todos los elementos.</li>
-  <li><strong>Selector de atributo</strong>: por ejemplo input[type="text"].</li>
+  <li>Etiqueta: p { }</li>
+  <li>Clase: .bienvenida { }</li>
+  <li>ID: #inicio { }</li>
+  <li>Universal: * { }</li>
 </ul>
-
-<div class="ejemplo">
-p { color: #333; }<br>
-.bienvenida { text-align: center; }<br>
-#inicio { font-size: 24px; }
-</div>
-
-<h2>Propiedades CSS comunes</h2>
-<ul>
-  <li>color, background-color</li>
-  <li>font-family, font-size, font-weight</li>
-  <li>margin, padding</li>
-  <li>border, border-radius</li>
-  <li>width, height, max-width</li>
-  <li>text-align, line-height</li>
-</ul>
-
-<h2>Ventajas de CSS</h2>
-<p>CSS permite separar el contenido del diseño. Esto facilita cambiar la apariencia de varias páginas sin tener que modificar cada uno de sus textos.</p>
+<div class="ejemplo">p { color: #333; }
+.bienvenida { text-align: center; }
+#inicio { font-size: 24px; }</div>
+<p>Propiedades comunes: color, background-color, margin, padding, border, font-size.</p>
 
 </div>
 
-<footer class="pie">Proyecto · Construye Aplicaciones Web</footer>
+<footer class="pie">Proyecto · Construye Aplicaciones Web · HTML, CSS y JavaScript</footer>
 </body>
 </html>

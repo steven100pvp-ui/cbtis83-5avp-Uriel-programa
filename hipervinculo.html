@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hipervínculos HTML</title>
+  <title>Hipervínculos</title>
   <link rel="stylesheet" href="adorno.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
@@ -13,12 +13,10 @@
 <body>
 <!-- barra de navegacion -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="index.html">
-    <img src="https://th.bing.com/th/id/OIP.QuIO-Kdup3cbkmSBqo0DiQAAAA?w=153&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="logo" style="width:40px;">
-  </a>
+  <a class="navbar-brand" href="index.html">Inicio</a>
   <ul class="navbar-nav">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">HTML</a>
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">HTML</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="semantica.html">Semántica</a>
         <a class="dropdown-item" href="formulario.html">Formulario</a>
@@ -29,47 +27,39 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">CSS</a>
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CSS</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="estilos.html">Estilos de hipervínculo</a>
         <a class="dropdown-item" href="selector.html">Selectores</a>
         <a class="dropdown-item" href="css.html">CSS</a>
       </div>
     </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
+        <a class="dropdown-item" href="js-condicionales.html">Condicionales (if / else / switch)</a>
+        <a class="dropdown-item" href="js-funciones.html">Funciones</a>
+        <a class="dropdown-item" href="js-for.html">Ciclo for</a>
+        <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
+        <a class="dropdown-item" href="js-dom.html">DOM y métodos</a>
+      </div>
+    </li>
   </ul>
 </nav>
-
 <div class="contenido">
 
 <h1>Hipervínculos</h1>
-
-<h2>¿Qué es un hipervínculo?</h2>
-<p>Un hipervínculo (enlace) permite pasar de una página a otra, a una sección de la misma página, a un correo o a un archivo. Se crea con la etiqueta <strong>&lt;a&gt;</strong>.</p>
-
-<h2>Atributos importantes</h2>
+<p>La etiqueta <strong>&lt;a&gt;</strong> crea enlaces. El atributo <strong>href</strong> indica el destino.</p>
 <ul>
-  <li><strong>href</strong>: dirección del destino.</li>
-  <li><strong>target</strong>: _blank abre en pestaña nueva; _self en la misma.</li>
-  <li><strong>title</strong>: texto al pasar el mouse.</li>
-  <li><strong>rel="noopener"</strong>: recomendable con target="_blank".</li>
+  <li>Internos, externos, anclas (#id), mailto:</li>
+  <li><strong>target="_blank"</strong> abre en otra pestaña</li>
 </ul>
-
-<div class="ejemplo">
-&lt;a href="index.html"&gt;Inicio&lt;/a&gt;<br>
-&lt;a href="https://www.google.com" target="_blank" rel="noopener"&gt;Google&lt;/a&gt;<br>
-&lt;a href="mailto:correo@ejemplo.com"&gt;Enviar correo&lt;/a&gt;
-</div>
-
-<h2>Tipos de enlaces</h2>
-<ul>
-  <li>Internos: a otra página del mismo sitio.</li>
-  <li>Externos: a otro sitio web.</li>
-  <li>Anclas: a una sección con id en la misma página (#seccion).</li>
-  <li>mailto: abre el cliente de correo.</li>
-</ul>
+<div class="ejemplo">&lt;a href="index.html"&gt;Inicio&lt;/a&gt;
+&lt;a href="https://www.google.com" target="_blank"&gt;Google&lt;/a&gt;</div>
 
 </div>
 
-<footer class="pie">Proyecto · Construye Aplicaciones Web</footer>
+<footer class="pie">Proyecto · Construye Aplicaciones Web · HTML, CSS y JavaScript</footer>
 </body>
 </html>
