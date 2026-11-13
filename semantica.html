@@ -1,54 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title><link rel="stylesheet" href="estilos.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estructura semántica HTML</title>
+  <link rel="stylesheet" href="adorno.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-</head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  
+<!-- barra de navegacion -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="index.html">
     <img src="https://th.bing.com/th/id/OIP.QuIO-Kdup3cbkmSBqo0DiQAAAA?w=153&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="logo" style="width:40px;">
   </a>
-  
-  
   <ul class="navbar-nav">
-  <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        HTML
-      </a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">HTML</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="semantica.html">semantica</a>
-        <a class="dropdown-item" href="formulario.html">formulario</a>
-        <a class="dropdown-item" href="tablas.html">tablas</a>
-
-        <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        CSS
-      </a>
+        <a class="dropdown-item" href="semantica.html">Semántica</a>
+        <a class="dropdown-item" href="formulario.html">Formulario</a>
+        <a class="dropdown-item" href="tablas.html">Tablas</a>
+        <a class="dropdown-item" href="listas.html">Listas</a>
+        <a class="dropdown-item" href="etiqueta.html">Etiquetas</a>
+        <a class="dropdown-item" href="hipervinculo.html">Hipervínculos</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">CSS</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="estilos.html">Estilos de hipervinculo</a>
+        <a class="dropdown-item" href="estilos.html">Estilos de hipervínculo</a>
         <a class="dropdown-item" href="selector.html">Selectores</a>
         <a class="dropdown-item" href="css.html">CSS</a>
-
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        HIPERVINCULO
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="listas.html">listas</a>
-        <a class="dropdown-item" href="hipervinculo.html">hipervinculos</a>
-        <a class="dropdown-item" href="etiqueta.html">etiquetas</a>
+      </div>
+    </li>
   </ul>
 </nav>
-   
+
+<div class="contenido">
+
 <h1>Estructura semántica de HTML</h1>
 
 <h2>¿Qué es HTML?</h2>
@@ -57,18 +49,40 @@
 <h2>Importancia de HTML</h2>
 <p>HTML es importante porque establece la estructura de una página web. Gracias a sus etiquetas, los navegadores pueden identificar los títulos, los textos y las diferentes partes de la información.</p>
 
+<h2>Etiquetas semánticas principales</h2>
+<ul>
+  <li><strong>&lt;header&gt;</strong>: encabezado de la página o de una sección.</li>
+  <li><strong>&lt;nav&gt;</strong>: menú de navegación.</li>
+  <li><strong>&lt;main&gt;</strong>: contenido principal.</li>
+  <li><strong>&lt;section&gt;</strong>: bloque temático.</li>
+  <li><strong>&lt;article&gt;</strong>: contenido independiente (artículo, entrada).</li>
+  <li><strong>&lt;aside&gt;</strong>: información complementaria.</li>
+  <li><strong>&lt;footer&gt;</strong>: pie de página.</li>
+</ul>
+
+<div class="ejemplo">
+&lt;header&gt;...&lt;/header&gt;<br>
+&lt;nav&gt;...&lt;/nav&gt;<br>
+&lt;main&gt;<br>
+&nbsp;&nbsp;&lt;section&gt;...&lt;/section&gt;<br>
+&lt;/main&gt;<br>
+&lt;footer&gt;...&lt;/footer&gt;
+</div>
+
 <h2>Partes de una página web</h2>
 <ul>
-    <li>Encabezado: presenta el título principal.</li>
-    <li>Navegación: organiza las opciones del sitio.</li>
-    <li>Contenido principal: contiene la información más importante.</li>
-    <li>Secciones: dividen el contenido por temas.</li>
-    <li>Pie de página: presenta información final.</li>
+  <li>Encabezado: presenta el título principal.</li>
+  <li>Navegación: organiza las opciones del sitio.</li>
+  <li>Contenido principal: contiene la información más importante.</li>
+  <li>Secciones: dividen el contenido por temas.</li>
+  <li>Pie de página: presenta información final.</li>
 </ul>
 
 <h2>Ventajas de la estructura semántica</h2>
 <p>Una estructura organizada facilita la lectura, ayuda a los buscadores a comprender el contenido y mejora la accesibilidad para las personas que utilizan herramientas de asistencia.</p>
 
- 
+</div>
+
+<footer class="pie">Proyecto · Construye Aplicaciones Web</footer>
 </body>
 </html>
