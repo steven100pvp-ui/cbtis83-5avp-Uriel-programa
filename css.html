@@ -11,7 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<!-- barra de navegacion -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="index.html">Inicio</a>
   <ul class="navbar-nav">
@@ -38,7 +37,7 @@
       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
-        <a class="dropdown-item" href="js-condicionales.html">Condicionales (if / else / switch)</a>
+        <a class="dropdown-item" href="js-condicionales.html">Condicionales</a>
         <a class="dropdown-item" href="js-funciones.html">Funciones</a>
         <a class="dropdown-item" href="js-for.html">Ciclo for</a>
         <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
@@ -49,13 +48,43 @@
 </nav>
 <div class="contenido">
 
-<h1>CSS</h1>
-<p>Cascading Style Sheets: define la apariencia del HTML.</p>
-<ul>
-  <li>En línea, interno (&lt;style&gt;) o externo (.css) — se recomienda externo</li>
-  <li>Modelo de caja: content, padding, border, margin</li>
-</ul>
+<h1>CSS: hojas de estilo en cascada</h1>
+<p>
+  <strong>CSS</strong> (Cascading Style Sheets) controla la apariencia del HTML:
+  colores, tipografía, espaciado, bordes y distribución.
+</p>
+
+<h2>Tres formas de aplicar CSS</h2>
+<table class="tabla-tema">
+  <tr><th>Forma</th><th>Cómo</th><th>Recomendación</th></tr>
+  <tr><td>En línea</td><td>atributo style="..."</td><td>Solo casos puntuales</td></tr>
+  <tr><td>Interno</td><td>&lt;style&gt; en el &lt;head&gt;</td><td>Páginas pequeñas</td></tr>
+  <tr><td>Externo</td><td>archivo .css + &lt;link&gt;</td><td>La mejor opción</td></tr>
+</table>
+
 <div class="ejemplo">&lt;link rel="stylesheet" href="adorno.css"&gt;</div>
+
+<h2>Modelo de caja (box model)</h2>
+<p>Cada elemento es una caja con cuatro capas:</p>
+<ol>
+  <li><strong>content</strong> — el texto o imagen</li>
+  <li><strong>padding</strong> — espacio interior</li>
+  <li><strong>border</strong> — borde</li>
+  <li><strong>margin</strong> — espacio exterior respecto a otros elementos</li>
+</ol>
+
+<h2>Unidades comunes</h2>
+<ul>
+  <li><strong>px</strong> — píxeles fijos</li>
+  <li><strong>%</strong> — porcentaje del contenedor</li>
+  <li><strong>em / rem</strong> — relativos al tamaño de fuente</li>
+  <li><strong>vh / vw</strong> — relativos al alto/ancho de la ventana</li>
+</ul>
+
+<div class="tip">
+  En este proyecto, <strong>adorno.css</strong> es la hoja externa compartida por todas las páginas.
+  Así el diseño se mantiene uniforme.
+</div>
 
 </div>
 

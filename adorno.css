@@ -1,111 +1,171 @@
-/* Estilo simple tipo W3Schools */
+/* Estilo tipo W3Schools mejorado */
 * { box-sizing: border-box; }
 
 body {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
-  background-color: #f1f1f1;
-  color: #000;
-  line-height: 1.6;
+  background: #e8eef5;
+  color: #222;
+  line-height: 1.7;
 }
 
 .navbar {
-  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+  box-shadow: 0 3px 10px rgba(0,0,0,.2);
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  letter-spacing: .3px;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  border-radius: 6px;
+}
+
+.dropdown-item:hover {
+  background: #e3f2fd;
+  color: #0d47a1;
 }
 
 .contenido {
-  max-width: 960px;
-  margin: 24px auto 40px;
+  max-width: 980px;
+  margin: 28px auto 48px;
   background: #fff;
-  padding: 24px 28px;
-  border: 1px solid #ddd;
+  padding: 32px 36px;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  border-top: 5px solid #4CAF50;
 }
 
 .contenido h1 {
-  color: #2196F3;
+  color: #1976D2;
+  font-size: 1.85rem;
+  margin-top: 0;
+  padding-bottom: 12px;
   border-bottom: 3px solid #4CAF50;
-  padding-bottom: 8px;
 }
 
 .contenido h2 {
-  color: #4CAF50;
-  margin-top: 26px;
+  color: #2E7D32;
+  font-size: 1.25rem;
+  margin-top: 30px;
+  padding-left: 10px;
+  border-left: 4px solid #4CAF50;
 }
 
 .contenido h3 {
-  color: #555;
+  color: #455A64;
+  font-size: 1.05rem;
+  margin-top: 20px;
 }
 
 .bienvenida {
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #1976D2, #4CAF50);
   color: #fff;
   text-align: center;
-  padding: 18px;
-  margin-bottom: 20px;
+  padding: 28px 18px;
+  margin: -32px -36px 28px;
+  border-radius: 10px 10px 0 0;
 }
 
 .bienvenida h2 {
   color: #fff;
   margin: 0;
+  border: none;
+  padding: 0;
+  font-size: 1.7rem;
+}
+
+.bienvenida p {
+  margin: 10px 0 0;
+  opacity: .95;
+  font-size: .95rem;
 }
 
 .ejemplo {
-  background: #f8f8f8;
-  border-left: 4px solid #2196F3;
-  padding: 12px 14px;
-  margin: 14px 0;
+  background: #f5f9fc;
+  border: 1px solid #cfd8dc;
+  border-left: 5px solid #1976D2;
+  padding: 14px 16px;
+  margin: 16px 0;
   font-family: Consolas, "Courier New", monospace;
-  font-size: 14px;
+  font-size: 13.5px;
   overflow-x: auto;
   white-space: pre-wrap;
+  border-radius: 0 6px 6px 0;
+  color: #1a237e;
 }
 
 .nota {
-  background: #fff3cd;
-  border-left: 4px solid #ff9800;
-  padding: 12px 14px;
-  margin: 14px 0;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-left: 5px solid #FF9800;
+  padding: 14px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.tip {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-left: 5px solid #4CAF50;
+  padding: 14px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
 }
 
 .tabla-tema {
   width: 100%;
   border-collapse: collapse;
-  margin: 14px 0;
+  margin: 16px 0 22px;
+  font-size: 14.5px;
 }
 
 .tabla-tema th, .tabla-tema td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  border: 1px solid #cfd8dc;
+  padding: 11px 12px;
   text-align: left;
 }
 
 .tabla-tema th {
-  background: #2196F3;
+  background: #1976D2;
   color: #fff;
 }
 
-.tabla-tema tr:nth-child(even) {
-  background: #f9f9f9;
-}
+.tabla-tema tr:nth-child(even) { background: #f5f9fc; }
+.tabla-tema tr:hover { background: #e3f2fd; }
 
 ul, ol { padding-left: 22px; }
-li { margin: 5px 0; }
-
-footer.pie {
-  text-align: center;
-  color: #666;
-  padding: 16px;
-  font-size: 13px;
-}
+li { margin: 7px 0; }
 
 .btn-link {
   display: inline-block;
   background: #4CAF50;
   color: #fff !important;
-  padding: 8px 14px;
+  padding: 10px 16px;
   text-decoration: none;
-  margin: 4px 4px 4px 0;
-  border-radius: 2px;
+  margin: 5px 6px 5px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background .15s;
 }
 
-.btn-link:hover { background: #45a049; }
+.btn-link:hover { background: #388E3C; text-decoration: none; color: #fff !important; }
+.btn-blue { background: #1976D2; }
+.btn-blue:hover { background: #0D47A1; }
+.btn-orange { background: #FF9800; }
+.btn-orange:hover { background: #F57C00; }
+
+footer.pie {
+  text-align: center;
+  color: #607D8B;
+  padding: 18px;
+  font-size: 13px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+p { margin: 12px 0; }

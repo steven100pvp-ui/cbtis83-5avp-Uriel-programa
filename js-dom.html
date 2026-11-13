@@ -11,7 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<!-- barra de navegacion -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="index.html">Inicio</a>
   <ul class="navbar-nav">
@@ -38,7 +37,7 @@
       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
-        <a class="dropdown-item" href="js-condicionales.html">Condicionales (if / else / switch)</a>
+        <a class="dropdown-item" href="js-condicionales.html">Condicionales</a>
         <a class="dropdown-item" href="js-funciones.html">Funciones</a>
         <a class="dropdown-item" href="js-for.html">Ciclo for</a>
         <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
@@ -50,45 +49,60 @@
 <div class="contenido">
 
 <h1>DOM y métodos básicos</h1>
-
 <p>
-  El <strong>DOM</strong> (Document Object Model) representa la página como objetos.
-  JavaScript puede leer y cambiar textos, estilos y elementos.
+  El <strong>DOM</strong> (Document Object Model) es la representación de la página en forma de objetos.
+  JavaScript puede buscar elementos y cambiar su texto, estilo o contenido HTML.
 </p>
 
 <h2>getElementById</h2>
-<div class="ejemplo">&lt;h1 id="titulo"&gt;Hola&lt;/h1&gt;
+<p>Busca un elemento por su atributo <strong>id</strong> (debe ser único).</p>
+<div class="ejemplo">&lt;h1 id="prueba"&gt;The Document object&lt;/h1&gt;
 &lt;script&gt;
-  let el = document.getElementById("titulo");
-  el.style.color = "red";
-  el.textContent = "Nuevo texto";
+  let elemento = document.getElementById("prueba");
+  elemento.style.color = "red";
 &lt;/script&gt;</div>
 
-<h2>innerHTML</h2>
-<p>Cambia el contenido HTML de un elemento.</p>
-<div class="ejemplo">document.getElementById("mensaje").innerHTML = "¡Bienvenido!";
-document.getElementById("imagen").innerHTML = '&lt;img src="foto.jpg" width="100"&gt;';</div>
+<h2>textContent e innerHTML</h2>
+<ul>
+  <li><strong>textContent</strong> — solo texto</li>
+  <li><strong>innerHTML</strong> — puede incluir etiquetas HTML</li>
+</ul>
+<div class="ejemplo">document.getElementById("aviso").textContent = "Hola Estudiantes";
+document.getElementById("mensaje").innerHTML = "¡Bienvenido!";
+document.getElementById("imagen").innerHTML = '&lt;img src="gato.jpg" width="100" alt="gato"&gt;';</div>
 
 <h2>getElementsByClassName</h2>
-<div class="ejemplo">const lista = document.getElementsByClassName("ejemplo color");
-lista[0].style.backgroundColor = "lightblue";</div>
+<p>Devuelve una lista de elementos con esa clase. Se accede por índice [0], [1], …</p>
+<div class="ejemplo">const collection = document.getElementsByClassName("example color");
+collection[0].style.backgroundColor = "lightblue";</div>
 
 <h2>querySelector</h2>
-<p>Selecciona el primer elemento que coincida con un selector CSS.</p>
+<p>Usa un selector CSS y devuelve el primer elemento que coincida.</p>
 <div class="ejemplo">document.querySelector(".destacado").style.color = "red";
 document.querySelector(".btn").disabled = true;</div>
 
-<h2>Eventos (clic)</h2>
-<div class="ejemplo">&lt;button id="boton"&gt;Cambiar&lt;/button&gt;
+<h2>Eventos: responder a un clic</h2>
+<div class="ejemplo">&lt;h3 id="titulo"&gt;Mi primera página&lt;/h3&gt;
+&lt;button id="boton"&gt;Cambiar texto&lt;/button&gt;
 &lt;script&gt;
-  document.getElementById("boton").addEventListener("click", function() {
-    document.getElementById("titulo").textContent = "¡Aprendiendo JavaScript!";
+  const boton = document.getElementById("boton");
+  const titulo = document.getElementById("titulo");
+  boton.addEventListener("click", function() {
+    titulo.textContent = "¡Estoy aprendiendo JavaScript!";
   });
 &lt;/script&gt;</div>
 
-<div class="nota">
-  Métodos vistos en práctica: getElementById, getElementsByClassName,
-  innerHTML, textContent, querySelector y eventos click.
+<table class="tabla-tema">
+  <tr><th>Método</th><th>Para qué sirve</th></tr>
+  <tr><td>getElementById</td><td>Un elemento por id</td></tr>
+  <tr><td>getElementsByClassName</td><td>Varios elementos por clase</td></tr>
+  <tr><td>querySelector</td><td>Primer match de selector CSS</td></tr>
+  <tr><td>innerHTML / textContent</td><td>Cambiar contenido</td></tr>
+  <tr><td>addEventListener</td><td>Reaccionar a clics y otros eventos</td></tr>
+</table>
+
+<div class="tip">
+  Primero crea el HTML con id o class; después el script puede encontrarlo y modificarlo.
 </div>
 
 </div>
