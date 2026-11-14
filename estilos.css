@@ -1,37 +1,237 @@
+/* CSS externo - diseño coherente y responsivo (lista de cotejo) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eaf4ff;
-    color: #243447;
-    margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #eef2f6;
+  color: #222;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-div {
-    background-color: #212529;
+/* --- Semántica: header --- */
+.site-header {
+  background: linear-gradient(135deg, #1976D2, #4CAF50);
+  color: #fff;
+  padding: 20px 16px;
+  text-align: center;
+}
+.site-header h1 { font-size: 1.55rem; margin-bottom: 4px; }
+.site-header p { font-size: 0.92rem; opacity: 0.95; }
+
+/* --- Semántica: nav --- */
+.site-nav { background: #263238; }
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.site-nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 15px;
+  font-size: 0.9rem;
+}
+.site-nav a:hover, .site-nav a.active { background: #1976D2; }
+
+/* Dropdown simple con details/summary para no depender solo de Bootstrap JS */
+.site-nav details { position: relative; }
+.site-nav summary {
+  list-style: none;
+  color: #fff;
+  padding: 13px 15px;
+  cursor: pointer;
+}
+.site-nav summary::-webkit-details-marker { display: none; }
+.site-nav details[open] summary { background: #37474f; }
+.site-nav .sub {
+  background: #37474f;
+  min-width: 200px;
+}
+.site-nav .sub a {
+  border-bottom: 1px solid #455a64;
+  padding: 10px 16px;
+  font-size: 0.88rem;
 }
 
-h1 {
-    background-color: #123c69;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin: 0;
+/* --- main content --- */
+.site-main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 22px auto;
+  padding: 0 14px;
 }
 
-h2 {
-    background-color: #5b9bd5;
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px 26px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  border-top: 4px solid #4CAF50;
+}
+.card h2 {
+  color: #1976D2;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #4CAF50;
+}
+.card h3 { color: #2E7D32; margin: 18px 0 8px; font-size: 1.08rem; }
+.card p { margin-bottom: 11px; }
+
+/* Listas */
+.card ul, .card ol, .card dl { margin: 10px 0 14px 22px; }
+.card li, .card dt, .card dd { margin: 6px 0; }
+.card dt { font-weight: bold; }
+.card dd { margin-left: 12px; color: #444; }
+
+/* Tablas */
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+table.data th, table.data td {
+  border: 1px solid #90a4ae;
+  padding: 10px 12px;
+  text-align: left;
+}
+table.data th { background: #1976D2; color: #fff; }
+table.data tr:nth-child(even) { background: #f5f9fc; }
+table.data caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #37474f;
 }
 
-p {
-    font-size: 17px;
-    line-height: 1.6;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
+/* Imágenes */
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  margin: 10px 0;
+}
+.img-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 12px 0;
+}
+.img-grid figure { flex: 1 1 200px; text-align: center; }
+.img-grid figcaption { font-size: 0.85rem; color: #546e7a; margin-top: 6px; }
+
+/* Video */
+video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+  background: #000;
 }
 
+/* Formulario */
+form.formulario label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: bold;
+}
+form.formulario input[type="text"],
+form.formulario input[type="email"],
+form.formulario input[type="number"],
+form.formulario select,
+form.formulario textarea {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px;
+  border: 1px solid #90a4ae;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+form.formulario textarea { min-height: 80px; }
+form.formulario button, .btn {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+  margin: 12px 8px 0 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+}
+form.formulario button:hover, .btn:hover { background: #388E3C; }
+form.formulario button.sec { background: #607d8b; }
+form.formulario button.sec:hover { background: #455a64; }
 
+/* Alertas visuales */
+.alerta {
+  display: none;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.alerta.ok { background: #c8e6c9; color: #1b5e20; border: 1px solid #81c784; }
+.alerta.error { background: #ffcdd2; color: #b71c1c; border: 1px solid #e57373; }
+.alerta.info { display: block; background: #e3f2fd; color: #0d47a1; border: 1px solid #64b5f6; }
 
+.ejemplo {
+  background: #f7f9fc;
+  border-left: 4px solid #1976D2;
+  padding: 12px 14px;
+  margin: 12px 0;
+  font-family: Consolas, monospace;
+  font-size: 0.88rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  border-radius: 0 6px 6px 0;
+}
+.nota {
+  background: #fff8e1;
+  border-left: 4px solid #ff9800;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 0 6px 6px 0;
+}
+.tip {
+  background: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border-radius: 0 6px 6px 0;
+}
 
+/* Footer */
+.site-footer {
+  background: #263238;
+  color: #b0bec5;
+  text-align: center;
+  padding: 16px;
+  font-size: 0.88rem;
+  margin-top: auto;
+}
+.site-footer a { color: #81d4fa; }
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 768px) {
+  .site-header h1 { font-size: 1.25rem; }
+  .site-nav ul { flex-direction: column; align-items: stretch; }
+  .site-nav .sub { position: static; }
+  .card { padding: 16px; }
+  .img-grid { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  table.data { font-size: 0.82rem; }
+  table.data th, table.data td { padding: 7px; }
+}

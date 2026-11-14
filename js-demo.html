@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo JS | Construye Aplicaciones Web</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Construye Aplicaciones Web</h1>
+    <p>HTML · CSS · JavaScript — Proyecto escolar</p>
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <details>
+          <summary>HTML ▾</summary>
+          <div class="sub">
+            <a href="semantica.html">Semántica</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="tablas.html">Tablas</a>
+            <a href="listas.html">Listas</a>
+            <a href="etiqueta.html">Etiquetas</a>
+            <a href="hipervinculo.html">Hipervínculos</a>
+            <a href="multimedia.html">Imágenes y Video</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>CSS ▾</summary>
+          <div class="sub">
+            <a href="css.html">CSS</a>
+            <a href="selector.html">Selectores</a>
+            <a href="estilos-enlace.html">Estilos de enlaces</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>JavaScript ▾</summary>
+          <div class="sub">
+            <a href="js-intro.html">Intro y variables</a>
+            <a href="js-condicionales.html">Condicionales</a>
+            <a href="js-funciones.html">Funciones</a>
+            <a href="js-for.html">Ciclo for</a>
+            <a href="js-dowhile.html">Do while</a>
+            <a href="js-dom.html">DOM</a>
+            <a href="js-demo.html">Demo interactiva</a>
+          </div>
+        </details>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="site-main">
+
+    <section class="card">
+      <h2>Demo interactiva JavaScript</h2>
+      <p>Botones que usan alert, prompt, condicionales, for y DOM.</p>
+      <button type="button" class="btn" id="btn1">Saludo (alert + prompt)</button>
+      <button type="button" class="btn" id="btn2">¿Puedes votar? (if)</button>
+      <button type="button" class="btn" id="btn3">Tabla del 5 (for)</button>
+      <div id="panel" class="ejemplo" style="min-height: 50px; margin-top: 14px;"></div>
+    </section>
+    <script>
+      document.getElementById("btn1").onclick = function() {
+        var nom = prompt("Escribe tu nombre:");
+        if (nom) {
+          alert("Hola " + nom);
+          document.getElementById("panel").textContent = "Último saludo: " + nom;
+        }
+      };
+      document.getElementById("btn2").onclick = function() {
+        var edad = Number(prompt("Edad:"));
+        if (isNaN(edad)) { alert("Escribe un número"); return; }
+        if (edad >= 18) alert("Puedes votar");
+        else alert("No puedes votar aún");
+      };
+      document.getElementById("btn3").onclick = function() {
+        var t = "";
+        for (var i = 1; i <= 10; i++) t += "5 x " + i + " = " + (5 * i) + "\n";
+        document.getElementById("panel").textContent = t;
+        alert("Tabla generada en pantalla");
+      };
+    </script>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Proyecto · Construye Aplicaciones Web</p>
+    <p>
+      <a href="index.html">Inicio</a> ·
+      <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a> ·
+      <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN</a>
+    </p>
+  </footer>
+
+</body>
+</html>

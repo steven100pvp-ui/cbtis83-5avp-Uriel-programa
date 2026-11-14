@@ -1,99 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Selectores CSS</title>
-  <link rel="stylesheet" href="adorno.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores CSS | Construye Aplicaciones Web</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="index.html">Inicio</a>
-  <ul class="navbar-nav">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">HTML</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="semantica.html">Semántica</a>
-        <a class="dropdown-item" href="formulario.html">Formulario</a>
-        <a class="dropdown-item" href="tablas.html">Tablas</a>
-        <a class="dropdown-item" href="listas.html">Listas</a>
-        <a class="dropdown-item" href="etiqueta.html">Etiquetas</a>
-        <a class="dropdown-item" href="hipervinculo.html">Hipervínculos</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CSS</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="estilos.html">Estilos de hipervínculo</a>
-        <a class="dropdown-item" href="selector.html">Selectores</a>
-        <a class="dropdown-item" href="css.html">CSS</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">JavaScript</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="js-intro.html">Introducción y variables</a>
-        <a class="dropdown-item" href="js-condicionales.html">Condicionales</a>
-        <a class="dropdown-item" href="js-funciones.html">Funciones</a>
-        <a class="dropdown-item" href="js-for.html">Ciclo for</a>
-        <a class="dropdown-item" href="js-dowhile.html">Ciclo do while</a>
-        <a class="dropdown-item" href="js-dom.html">DOM y métodos</a>
-      </div>
-    </li>
-  </ul>
-</nav>
-<div class="contenido">
+  <header class="site-header">
+    <h1>Construye Aplicaciones Web</h1>
+    <p>HTML · CSS · JavaScript — Proyecto escolar</p>
+  </header>
 
-<h1>Selectores y propiedades CSS</h1>
-<p>
-  Un <strong>selector</strong> indica a qué elementos se aplica el estilo.
-  Las <strong>propiedades</strong> definen qué cambia (color, tamaño, margen…).
-</p>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li>
+        <details>
+          <summary>HTML ▾</summary>
+          <div class="sub">
+            <a href="semantica.html">Semántica</a>
+            <a href="formulario.html">Formulario</a>
+            <a href="tablas.html">Tablas</a>
+            <a href="listas.html">Listas</a>
+            <a href="etiqueta.html">Etiquetas</a>
+            <a href="hipervinculo.html">Hipervínculos</a>
+            <a href="multimedia.html">Imágenes y Video</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>CSS ▾</summary>
+          <div class="sub">
+            <a href="css.html">CSS</a>
+            <a href="selector.html">Selectores</a>
+            <a href="estilos-enlace.html">Estilos de enlaces</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>JavaScript ▾</summary>
+          <div class="sub">
+            <a href="js-intro.html">Intro y variables</a>
+            <a href="js-condicionales.html">Condicionales</a>
+            <a href="js-funciones.html">Funciones</a>
+            <a href="js-for.html">Ciclo for</a>
+            <a href="js-dowhile.html">Do while</a>
+            <a href="js-dom.html">DOM</a>
+            <a href="js-demo.html">Demo interactiva</a>
+          </div>
+        </details>
+      </li>
+    </ul>
+  </nav>
 
-<h2>Tipos de selectores</h2>
-<table class="tabla-tema">
-  <tr><th>Tipo</th><th>Ejemplo</th><th>Selecciona</th></tr>
-  <tr><td>Etiqueta</td><td>p { }</td><td>Todos los &lt;p&gt;</td></tr>
-  <tr><td>Clase</td><td>.bienvenida { }</td><td>Elementos con class="bienvenida"</td></tr>
-  <tr><td>ID</td><td>#inicio { }</td><td>El elemento con id="inicio"</td></tr>
-  <tr><td>Universal</td><td>* { }</td><td>Todos los elementos</td></tr>
-  <tr><td>Descendente</td><td>nav a { }</td><td>Enlaces dentro de nav</td></tr>
-</table>
+  <main class="site-main">
 
-<h2>Propiedades muy usadas</h2>
-<ul>
-  <li><strong>color</strong>, <strong>background-color</strong></li>
-  <li><strong>font-family</strong>, <strong>font-size</strong>, <strong>font-weight</strong></li>
-  <li><strong>margin</strong> (afuera), <strong>padding</strong> (adentro)</li>
-  <li><strong>border</strong>, <strong>border-radius</strong></li>
-  <li><strong>width</strong>, <strong>max-width</strong>, <strong>height</strong></li>
-  <li><strong>text-align</strong>, <strong>line-height</strong></li>
-</ul>
-
-<div class="ejemplo">p {
-  color: #333;
-  font-size: 16px;
-}
-.bienvenida {
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-}
-#inicio {
-  font-size: 24px;
+    <section class="card">
+      <h2>Selectores CSS</h2>
+      <table class="data">
+        <tr><th>Tipo</th><th>Ejemplo</th></tr>
+        <tr><td>Etiqueta</td><td>p { color: #333; }</td></tr>
+        <tr><td>Clase</td><td>.card { padding: 24px; }</td></tr>
+        <tr><td>ID</td><td>#msg-ok { display: none; }</td></tr>
+      </table>
+      <div class="ejemplo">.card h2 {
+  color: #1976D2;
+  border-bottom: 2px solid #4CAF50;
 }</div>
+    </section>
 
-<div class="nota">
-  La clase se puede repetir en varios elementos. El id debe ser único en la página
-  (importante también para JavaScript).
-</div>
+  </main>
 
-</div>
+  <footer class="site-footer">
+    <p>Proyecto · Construye Aplicaciones Web</p>
+    <p>
+      <a href="index.html">Inicio</a> ·
+      <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a> ·
+      <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN</a>
+    </p>
+  </footer>
 
-<footer class="pie">Proyecto · Construye Aplicaciones Web · HTML, CSS y JavaScript</footer>
 </body>
 </html>
